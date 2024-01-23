@@ -1,38 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
     <title>Hockey Club</title>
 
     <!-- Google Font -->
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap');
-        .font-manrope{
+
+        .font-manrope {
             font-family: 'Manrope', sans-serif;
         }
     </style>
 
     <!-- daisyUI files -->
-
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.6.0/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
 
     <!-- tailwind color config -->
     <script>
         tailwind.config = {
-          theme: {
-            extend: {
-              colors: {
-                clifford: '#da373d',
-              }
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                    }
+                }
             }
-          }
         }
-      </script>
-      <!-- Font awesome kit -->
-      <script src="https://kit.fontawesome.com/c5ef7dfac7.js" crossorigin="anonymous"></script>
+    </script>
+    <!-- Font awesome kit -->
+    <script src="https://kit.fontawesome.com/c5ef7dfac7.js" crossorigin="anonymous"></script>
 </head>
 
 <body class="font-manrope">
@@ -41,79 +42,141 @@
         <div class="container mx-auto lg:px-24 px-2">
             <div class="navbar sm:flex sm:justify-between bg-base-100">
                 <div class="navbar-start">
-                  <div class="dropdown">
-                    <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
-                      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
+                    <div class="dropdown">
+                        <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M4 6h16M4 12h8m-8 6h16" />
+                            </svg>
+                        </div>
+                        <ul tabindex="0"
+                            class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52 text-base">
+                            <li><a>Home</a></li>
+                            <li><a>About</a></li>
+                            <li><a>Pages</a></li>
+                            <li><a>Blog</a></li>
+                            <li><a>Contact</a></li>
+                        </ul>
                     </div>
-                    <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52 text-base">
+                    <a class="text-2xl lg:text-4xl font-extrabold">Hockey<span
+                            class="text-[#ff4240] mx-0">'</span>s</a>
+                </div>
+                <div class="navbar-center hidden lg:flex">
+                    <ul class="menu menu-horizontal px-1">
                         <li><a>Home</a></li>
                         <li><a>About</a></li>
                         <li><a>Pages</a></li>
                         <li><a>Blog</a></li>
                         <li><a>Contact</a></li>
                     </ul>
-                  </div>
-                  <a class="text-2xl lg:text-4xl font-extrabold">Hockey<span class="text-[#ff4240] mx-0">'</span>s</a>
-                </div>
-                <div class="navbar-center hidden lg:flex">
-                  <ul class="menu menu-horizontal px-1">
-                    <li><a>Home</a></li>
-                    <li><a>About</a></li>
-                    <li><a>Pages</a></li>
-                    <li><a>Blog</a></li>
-                    <li><a>Contact</a></li>
-                  </ul>
                 </div>
                 <div class="navbar-end gap-6">
                     <i class="fa-solid fa-magnifying-glass hidden lg:flex"></i>
-                  <a class="btn mr-[16px] lg:-mr-[10px] bg-[#ff4240] text-white text-lg lg:text-base font-bold rounded-md">Get Ticket</a>
+                    <a class="btn mr-[16px] lg:-mr-[10px] bg-[#ff4240] text-white text-lg lg:text-base font-bold rounded-md">Get
+                        Ticket</a>
                 </div>
             </div>
         </div>
-        
-          <!-- carousel -->
-          <div class="container mx-auto lg:px-24 px-8">
-            <div class="carousel w-full">
+
+        <!-- carousel -->
+        <div class="container mx-auto lg:px-24 px-8">
+            <div class="carousel relative w-full flex col-span-1">
+                <!-- Slide 1 -->
                 <div id="slide1" class="carousel-item relative w-full">
-                    <img src="./images/1.png" class="w-full" />
-                  <div class="absolute flex justify-center lg:justify-start transform translate-y-8 lg:translate-y-12 lg:translate-y-36 left-5 right-5 top-1/2 gap-3">
-                    <a href="#slide4" class="btn btn-circle border-none bg-[#131318] text-white">❮</a> 
-                    <a href="#slide2" class="btn btn-circle border-none bg-[#131318] text-white ">❯</a>
-                  </div>
-                </div> 
-                <div id="slide2" class="carousel-item relative w-full">
-                  <img src="https://daisyui.com/images/stock/photo-1609621838510-5ad474b7d25d.jpg" class="w-full" />
-                  <div class="absolute flex transform translate-y-12 lg:translate-y-36 left-5 right-5 top-1/2 gap-3">
-                    <a href="#slide1" class="btn btn-circle border-none bg-[#131318] text-white">❮</a> 
-                    <a href="#slide3" class="btn btn-circle border-none bg-[#131318] text-white ">❯</a>
-                  </div>
-                </div> 
-                <div id="slide3" class="carousel-item relative w-full">
-                  <img src="https://daisyui.com/images/stock/photo-1414694762283-acccc27bca85.jpg" class="w-full" />
-                  <div class="absolute flex transform translate-y-12 lg:translate-y-36 left-5 right-5 top-1/2 gap-3">
-                    <a href="#slide2" class="btn btn-circle border-none bg-[#131318] text-white ">❮</a> 
-                    <a href="#slide4" class="btn btn-circle border-none bg-[#131318] text-white ">❯</a>
-                  </div>
-                </div> 
-                <div id="slide4" class="carousel-item relative w-full">
-                  <img src="https://daisyui.com/images/stock/photo-1665553365602-b2fb8e5d1707.jpg" class="w-full" />
-                  <div class="absolute flex transform translate-y-12 lg:translate-y-36 left-5 right-5 top-1/2 gap-3">
-                    <a href="#slide3" class="btn btn-circle border-none bg-[#131318] text-white">❮</a> 
-                    <a href="#slide1" class="btn btn-circle border-none bg-[#131318] text-white ">❯</a>
-                  </div>
+                    <img src="./images/1.png" class="w-full lg:h-[550px]" />
+                    <div
+                        class="absolute flex justify-center lg:justify-start transform translate-y-8 lg:translate-y-36 left-5 right-5 top-1/2 gap-3">
+                        <a href="#slide4"
+                            class="btn btn-circle border-none bg-[#131318] text-white">❮</a>
+                        <a href="#slide2"
+                            class="btn btn-circle border-none bg-[#131318] text-white ">❯</a>
+                    </div>
                 </div>
-              </div>  
+                <!-- Slide 2 -->
+                <div id="slide2" class="carousel-item relative w-full lg:h-[550px]">
+                    <img src="./images/2.png" class="w-full" />
+                    <div
+                        class="absolute flex justify-center lg:justify-start transform translate-y-8  lg:translate-y-36 left-5 right-5 top-1/2 gap-3">
+                        <a href="#slide1"
+                            class="btn btn-circle border-none bg-[#131318] text-white">❮</a>
+                        <a href="#slide3"
+                            class="btn btn-circle border-none bg-[#131318] text-white ">❯</a>
+                    </div>
+                </div>
+                <!-- Slide 3 -->
+                <div id="slide3" class="carousel-item relative w-full lg:h-[550px]">
+                    <img src="./images/3.png" class="w-full" />
+                    <div
+                        class="absolute flex justify-center lg:justify-start transform translate-y-8 lg:translate-y-36 left-5 right-5 top-1/2 gap-3">
+                        <a href="#slide2"
+                            class="btn btn-circle border-none bg-[#131318] text-white ">❮</a>
+                        <a href="#slide4"
+                            class="btn btn-circle border-none bg-[#131318] text-white ">❯</a>
+                    </div>
+                </div>
+                <!-- Slide 4 -->
+                <div id="slide4" class="carousel-item relative w-full lg:h-[550px]">
+                    <img src="./images/4.png" class="w-full" />
+                    <div
+                        class="absolute flex justify-center lg:justify-start transform translate-y-8  lg:translate-y-36 left-5 right-5 top-1/2 gap-3">
+                        <a href="#slide3"
+                            class="btn btn-circle border-none bg-[#131318] text-white">❮</a>
+                        <a href="#slide1"
+                            class="btn btn-circle border-none bg-[#131318] text-white ">❯</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Hero Section -->
+            <div
+                class="absolute bg-[#131318] w-[361px] lg:w-[566px] p-4 lg:p-8 rounded-md lg:transform lg:translate-x-72 lg:left-60 lg:top-96 my-4 lg:my-auto">
+                <h3 class="text-lg lg:text-2xl text-white font-extrabold">Meet all the heroes from the field</h3>
 
-          </div>
 
+                <p class="text-s lg:text-base text-white">Join us to meet all the heroes from the field, each with a
+                    unique story of triumph and inspiration</p>
+            </div>
+        </div>
     </header>
 
     <main>
+        <!-- progress section -->
+        <div class="container mx-auto my-48 lg:my-32 space-y-10">
+            <div class="text-center lg:mx-auto mx-10">
+                <h3 class="text-2xl lg:4xl font-extrabold">Professional Hockeys Club</h3>
+                <p class="text-sm lg:text-base text-gray-400">The Professional Hockey Club, Hockey's, is a powerhouse of
+                    skill, teamwork, and passion, embodying the spirit of the sport on and off the ice</p>
+            </div>
+            <div class="container flex justify-center flex-col items-center lg:flex-row gap-14 lg:gap-20">
+                <div class="text-center w-56 space-y-3">
+                  <div class="radial-progress text-red-600" style="--value:87;" role="progressbar"><p class="text-[#131318] font-extrabold">87%</p></div>
+                  <h3 class="text-xl font-medium">Prayer Facility</h3>
+                  <p class="text-lg text-gray-500">A serene space for individuals to engage in contemplation, reflection, and spiritual connection</p>
+                </div>
+                <div class="text-center w-56 space-y-3">
+                  <div class="radial-progress text-green-400" style="--value:95;" role="progressbar"><p class="text-[#131318] font-extrabold">95%</p></div>
+                  <h3 class="text-xl font-medium">Experienced Coach</h3>
+                  <p class="text-lg text-gray-500">Experienced coach, honed skills, and a proven track record, provides invaluable guidance</p>
+                </div>
+                <div class="text-center w-56 space-y-3">
+                  <div class="radial-progress text-yellow-400" style="--value:90;" role="progressbar"><p class="text-[#131318] font-extrabold">90%</p></div>
+                  <h3 class="text-xl font-medium">Senior Player</h3>
+                  <p class="text-lg text-gray-500">Exceptional leadership and experience on the field, guiding the team with strategic prowess</p>
+                </div>
+                <div class="text-center w-56 space-y-3">
+                  <div class="radial-progress text-blue-500" style="--value:80;" role="progressbar"><p class="text-[#131318] font-extrabold">80%</p></div>
+                  <h3 class="text-xl font-medium">Training Ground</h3>
+                  <p class="text-lg text-gray-500">Advanced Simulation Technology, Customizable Training Modules and Performance Analytics</p>
+                </div>
+            </div>
+        </div>
 
+        <!-- progress section ended -->
     </main>
 
     <footer>
 
     </footer>
 </body>
+
 </html>
